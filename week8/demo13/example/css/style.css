@@ -1,0 +1,60 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-size: 1.5rem;
+    color:white;
+    min-height: 300vh;
+}
+
+.outer-container{
+    border: 3px dashed black;
+    width: 80vw;
+    height: 80vh;
+    margin: 50px auto;
+    position: relative;
+}
+
+.inner-container{
+    border: 3px solid gold;
+    width: 50vw;
+    height: 50vh;
+    margin: 20vh auto;
+}
+
+.box{
+    width: 100px;
+    height: 100px;
+    color: white;
+    padding: 1rem;
+}
+
+.absolute{
+    position: absolute;
+    background-color: red;
+    top: 10px;
+    left: 200px;
+}
+
+.relative{
+    position: relative;
+    background-color: darkorange;
+    top: 30px;
+    left: 40px;
+}
+
+.fixed{
+    position: fixed;
+    background-color: orange;
+    top: 50px;
+    left: 50px;
+}
+
+.sticky{
+    position: sticky;
+    background-color: green;
+    top: 0;
+}

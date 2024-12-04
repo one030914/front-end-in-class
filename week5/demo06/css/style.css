@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Guides:wght@400..700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Edu AU VIC WA NT Guides", cursive;
+    font-style: italic;
+    font-size: 2rem;
+    padding: 10%;
+
+    text-decoration: underline;
+    text-align: center;
+    text-indent: 1.5rem;
+    text-transform: capitalize;
+    word-spacing: 30%;
+    letter-spacing: 10%;
+    font-weight: 600;
+
+    line-height: 2.5rem;
+}
+
+input, button{
+    font: inherit;
+}

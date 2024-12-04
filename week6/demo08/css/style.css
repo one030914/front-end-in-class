@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Guides:wght@400..700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Edu AU VIC WA NT Guides", cursive;
+    font-size: 1.5rem;
+    padding: 10%;
+}
+
+ul{
+    list-style-image: url("../img/marked.png");
+    list-style-position: inside;
+    color: blue;
+}
+
+ul li:nth-child(odd){
+    background-color: darkgray;
+}
+
+ol li{
+    list-style-position: inside;
+}
+
+ol li:nth-child(even){
+    background-color: darkgray;
+}

@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Playwrite GB S", cursive;
+    font-size: 1rem;
+    margin: 1rem;
+}
+
+p{
+    margin-top: 2rem;
+}
+
+.columns{
+    columns: 4 100px;
+    column-rule: 2px solid black;
+    column-gap: 2rem;
+}
+
+.columns h2{
+    background-color: dimgray;
+    color: aliceblue;
+    padding: 0.5rem;
+    break-before: column;
+    break-inside: avoid;
+}
+
+.columns .quote{
+    margin-top: 2rem;
+    font-size: 3rem;
+    text-align: center;
+    color: darkgoldenrod;
+    column-span: all;
+}
+
+.nowrap{
+    white-space: nowrap;
+}

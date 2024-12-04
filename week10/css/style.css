@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-size: 2rem;
+}
+
+header{
+    text-align: center;
+    background-color: purple;
+    color: white;
+}
+
+main{
+    display: flex;
+    gap: 10px;
+}
+
+.sidebar{
+    width: 30%;
+    background-color: blue;
+    color: white;
+    text-align: center;
+    line-height: 200px;
+}
+
+.container{
+    width: 70%;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 20px;
+    div{
+        color: white;
+        background-color: black;
+        justify-self: stretch;
+    }
+    div:nth-child(1){
+        text-align: center;
+        line-height: 100px;
+        background-color: blue;
+        grid-column: 1 / span 4;
+        grid-row: 1 / span 2;
+    }
+    div:nth-child(2){
+        background-color: purple;
+        grid-column: 1 / span 6;
+        grid-row: 3;
+    }
+    div:nth-child(3){
+        grid-column: 5 / span 2;
+    }
+    div:nth-child(4){
+        grid-column: 5 / span 2;
+    }
+    div:nth-child(6){
+        grid-column: 2 / span 2;
+    }
+}
+
+footer{
+    text-align: center;
+    color: white;
+    background-color: purple;
+}

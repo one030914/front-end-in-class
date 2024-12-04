@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Guides:wght@400..700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Edu AU VIC WA NT Guides", cursive;
+    font-size: 2rem;
+    padding: 10%;
+}
+
+a{
+    color:tomato;
+    cursor: url("../img/cursor.png"), auto;
+}
+
+a:hover, a:focus{
+    background-color: aquamarine;
+}
+
+a:active{
+    color:brown;
+    background-color:aqua;
+}

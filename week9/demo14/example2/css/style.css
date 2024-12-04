@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 300vh;
+}
+
+ol, ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    &:hover{
+        color: orange;
+    }
+}
+
+h2{
+    margin-bottom: 20px;
+}
+
+.top{
+    position: sticky;
+    top: 0;
+    nav{
+        background-color: white;
+    }
+}
+
+.header{
+    background-color: orange;
+    padding: 40px;
+}
+
+.menu{
+    display: flex;
+    gap: 70px;
+    padding: 20px;
+    justify-content: flex-end;
+}
+
+.main{
+    margin: 2rem;
+    display: flex;
+    gap: 30px;
+    .selection{
+        flex: 1;
+    }
+    .aside{
+        width: 40%;
+        h3{
+            padding: 10px;
+            background: orange;
+            color: white;
+        }
+        li{
+            padding: 10px;
+            background: white;
+            border-bottom: 1px solid white;
+        }
+    }
+}

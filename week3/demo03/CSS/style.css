@@ -1,0 +1,28 @@
+body{
+    font-size: 1.5rem;
+    border: 5px solid #E9C46A;
+    background-color: #264653;
+}
+
+p{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #E76F51;
+}
+
+h1, h2{
+    color: #2A9D8F;
+}
+
+#p2{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: inherit;
+    color: #F4A261;
+}
+
+h2 span{
+    text-transform: uppercase;
+}
+
+p span, .HL{
+    background-color: #E9C46A;
+}
