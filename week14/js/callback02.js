@@ -1,6 +1,7 @@
 console.log("before");
 
 const getUser = (id, fn) => {
+    console.log("Layer 1: waiting 1 second...");
     setTimeout(() => {
         console.log(`Get id: ${id}`);
         fn({id: id, name: "John"});
@@ -8,17 +9,19 @@ const getUser = (id, fn) => {
 };
 
 const getRepos = (usName, fn) => {
+    console.log("Layer 2: waiting 2 seconds...");
     setTimeout(() => {
         console.log(`Get repos of user ${usName}`);
         fn(['repo1', 'repo2', 'repo3']);
-    }, 1000);
+    }, 2000);
 };
 
 const getComments = (repo, fn) => {
+    console.log("Layer 3: waiting 3 seconds...");
     setTimeout(() => {
         console.log(`Get repo comment: ${repo}`);
         fn(['nice', 'great', 'have some bugs...']);
-    }, 1000)
+    }, 3000)
 }
 
 const fn1 = (user) => {

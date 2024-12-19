@@ -1,14 +1,24 @@
-const myVehicle = {
-    brand: "Ford",
-    model: "Mustang",
-    color: "red",
-};
+function myDisplayer(some) {
+    console.log(some);
+}
 
-const updateMyVehicle = {
-    type: "car",
-    year: 2021,
-    color: "yellow",
-};
+let myPromise = new Promise(function (myResolve, myReject) {
+    let x = 0;// if x is 1, it will go to else and print "ERROR"
 
-const myUpdatedVehicle = { ...myVehicle, ...updateMyVehicle };
-console.log(myUpdatedVehicle);
+    // The producing code (this may take some time)
+
+    if (x == 0) {
+        myResolve("OK");
+    } else {
+        myReject("Error");
+    }
+});
+
+myPromise.then(
+    function (value) {
+        myDisplayer(value);
+    },
+    function (error) {
+        myDisplayer(error);
+    }
+);
