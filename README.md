@@ -22,3 +22,9 @@ Linux/macOS:
     go "package.json"
     change "dev" value into "bun --bun vite"
     enter "bun run dev" to create local website
+
+## reinstall package
+
+    go project folder
+    make sure it has "package.json" file
+    enter "bun install"
