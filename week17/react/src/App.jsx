@@ -5,7 +5,7 @@ import Todo from "./pages/Todo";
 import About from "./pages/About";
 import Product from "./pages/Product";
 
-function App() {
+export default function App() {
     const [page, setPage] = useState("home");
 
     const renderPage = () => {
@@ -55,4 +55,3 @@ function App() {
     );
 }
 
-export default App;
