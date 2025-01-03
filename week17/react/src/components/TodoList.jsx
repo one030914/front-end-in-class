@@ -1,28 +1,27 @@
-import TodoItem from "./TodoItem"
-import PropTypes from "prop-types"
+import TodoItem from "./TodoItem";
+import PropTypes from "prop-types";
+import style from "./TodoList.module.css";
 
-function TodoList({todos, toggler, deleteTodo}){
+export default function TodoList({ todos, toggler, update, deleteTodo }) {
     return (
         <ul>
-            {
-                todos.map((todo) => {
-                    <TodoItem key={todo.id} todo={todo} toggler={toggler} deleteTodo={deleteTodo} />
-                })
-            }
+            {todos.map((todo) => (
+                <TodoItem key={todo.id} todo={todo} toggler={toggler} update={update} deleteTodo={deleteTodo} />
+            ))}
         </ul>
     );
 }
-
-export default TodoList;
 
 TodoList.propTypes = {
     todos: PropTypes.arrayOf(
         PropTypes.shape({
             id: PropTypes.number.isRequired,
-            text: PropTypes.string.isRequired,
-            status: PropTypes.bool.isRequired,
+            input: PropTypes.string.isRequired,
+            date: PropTypes.string.isRequired,
+            state: PropTypes.bool.isRequired,
         })
     ).isRequired,
     toggler: PropTypes.func.isRequired,
+    update: PropTypes.func.isRequired,
     deleteTodo: PropTypes.func.isRequired,
-}
+};
