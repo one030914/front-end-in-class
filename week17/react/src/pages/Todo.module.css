@@ -1,0 +1,32 @@
+.App{
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    .title{
+        text-align: center;
+        color: white;
+    }
+    .form{
+        display: flex;
+        margin-bottom: 20px;
+    }
+    .input{
+        flex-grow: 1;
+        padding: 10px;
+        font-size: 1rem;
+        color: rgb(92, 236, 247);
+        border: 2px solid white;
+        &:nth-child(1){
+            border-radius: 5px 0 0 5px;
+        }
+    }
+    .button{
+        padding: 10px;
+        font-size: 1rem;
+        color: white;
+        background-color: darkblue;
+        border: 2px solid white;
+        border-radius: 0 5px 5px 0;
+        cursor: pointer;
+    }
+}
