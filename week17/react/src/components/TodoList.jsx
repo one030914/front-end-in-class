@@ -6,7 +6,13 @@ export default function TodoList({ todos, toggler, update, deleteTodo }) {
     return (
         <ul>
             {todos.map((todo) => (
-                <TodoItem key={todo.id} todo={todo} toggler={toggler} update={update} deleteTodo={deleteTodo} />
+                <TodoItem
+                    key={todo.id}
+                    todo={todo}
+                    toggler={toggler}
+                    update={update}
+                    deleteTodo={deleteTodo}
+                />
             ))}
         </ul>
     );

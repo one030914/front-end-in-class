@@ -45,7 +45,7 @@ export default function Todo() {
                 "Content-Type": "application/json",
             },
             body: JSON.stringify(update),
-        }).then((date) => {
+        }).then((data) => {
             setTodos(todos.map((todo) => (todo.id === id ? update : todo)));
         });
     };
