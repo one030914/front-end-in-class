@@ -1,29 +1,53 @@
 import TodoList from "../components/TodoList";
 import style from "./Todo.module.css";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function Todo() {
     const [todos, setTodos] = useState([]);
     const [input, setInput] = useState("");
     const [date, setDate] = useState("");
+    const jsonUrl = "http://localhost:3000/todos";
+
+    useEffect(() => {
+        fetch(jsonUrl)
+            .then((res) => res.json())
+            .then((data) => setTodos(data));
+    }, []);
 
     const addTodo = (e) => {
         e.preventDefault();
         if (!input.trim() || !date) return;
         const newTodo = {
-            id: Date.now(),
             input: input,
             date: date,
             state: false,
         };
-        setTodos([...todos, newTodo]);
-        setInput("");
-        setDate("");
+        fetch(jsonUrl, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(newTodo),
+        })
+            .then((res) => res.json())
+            .then((data) => {
+                setTodos([...todos, data]);
+                setInput("");
+                setDate("");
+            });
     };
 
     const change = (id, update) => {
-        setTodos(todos.map((todo) => (todo.id === id ? update : todo)));
+        fetch(`${jsonUrl}/${id}`, {
+            method: "PUT",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(update),
+        }).then((date) => {
+            setTodos(todos.map((todo) => (todo.id === id ? update : todo)));
+        });
     };
 
     const toggler = (id, e) => {
@@ -42,8 +66,12 @@ export default function Todo() {
 
     const deleteTodo = (id, e) => {
         e.preventDefault();
-        const update = todos.filter((todo) => todo.id !== id);
-        setTodos(update);
+        fetch(`${jsonUrl}/${id}`, { method: "DELETE" }).then((res) => {
+            if (res.ok) {
+                const update = todos.filter((todo) => todo.id !== id);
+                setTodos(update);
+            }
+        });
     };
 
     return (

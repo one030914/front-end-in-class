@@ -4,7 +4,8 @@
     "version": "0.0.0",
     "type": "module",
     "scripts": {
-        "dev": "bunx --bun vite --port 5174",
+        "dev": "bunx --bun vite --port 5000",
+        "jserv": "json-server --watch ./json_server/db.json --start --port 3000",
         "build": "vite build",
         "lint": "eslint .",
         "preview": "vite preview"
@@ -23,6 +24,7 @@
         "eslint-plugin-react-hooks": "^5.0.0",
         "eslint-plugin-react-refresh": "^0.4.16",
         "globals": "^15.14.0",
-        "vite": "^6.0.5"
+        "json-server": "0.17.4",
+        "vite": "^5.0.0"
     }
 }
